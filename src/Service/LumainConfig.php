@@ -40,7 +40,7 @@ class LumainConfig implements LumainConfigInterface
     public function getEnvAllowIPS(): array
     {
         $ip = $this->config['maintenance']['env']['allow_ips'];
-        return empty($ip) ? ['-'] : explode(',', $ip);
+        return empty($ip) ? [] : explode(',', $ip);
     }
 
     /**

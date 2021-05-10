@@ -85,6 +85,6 @@ class LumainLocalService implements LumainLocalServiceInterface
             $envIP = $this->lumainConfig->getEnvAllowIPS();
             $ip = array_merge($localIP, $envIP);
         }
-        return new IP(empty($ip) ? ['-'] : $ip);
+        return new IP(empty($ip) ? [] : $ip);
     }
 }
