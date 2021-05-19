@@ -19,7 +19,7 @@ class IP
      */
     public function __construct($ips = [])
     {
-        $this->ips = $ips;
+        $this->ips = count($ips) === 0 ? ['-'] : $ips;
     }
 
     /**

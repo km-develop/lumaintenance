@@ -9,19 +9,13 @@ namespace Lumaintenance\Service;
 class LumainConfig implements LumainConfigInterface
 {
     /**
-     * @var LumainConfigInterface
+     * @var
      */
-    private $lumainConfig;
+    private $config;
 
-    /**
-     * LumainConfig constructor.
-     * @param LumainConfigInterface $lumainConfig
-     */
-    public function __construct(
-        LumainConfigInterface $lumainConfig
-    )
+    public function __construct($config)
     {
-        $this->lumainConfig = $lumainConfig;
+        $this->config = $config;
     }
 
     /**
@@ -29,7 +23,7 @@ class LumainConfig implements LumainConfigInterface
      */
     public function getLocalFile(): string
     {
-        return $this->lumainConfig->getLocalFile();
+        return $this->config['maintenance']['local']['file'];
     }
 
     /**
@@ -37,7 +31,7 @@ class LumainConfig implements LumainConfigInterface
      */
     public function getEnvISDown(): bool
     {
-        return $this->lumainConfig->getEnvISDown();
+        return !empty($this->config['maintenance']['env']['is_down']);
     }
 
     /**
@@ -45,7 +39,8 @@ class LumainConfig implements LumainConfigInterface
      */
     public function getEnvAllowIPS(): array
     {
-        return $this->lumainConfig->getEnvAllowIPS();
+        $ip = $this->config['maintenance']['env']['allow_ips'];
+        return empty($ip) ? [] : explode(',', $ip);
     }
 
     /**
@@ -53,7 +48,7 @@ class LumainConfig implements LumainConfigInterface
      */
     public function getExcludePath(): string
     {
-        return $this->lumainConfig->getExcludePath();
+        return $this->config['maintenance']['env']['exclude_path'];
     }
 
     /**
@@ -61,7 +56,7 @@ class LumainConfig implements LumainConfigInterface
      */
     public function getResponseStatus(): int
     {
-        return $this->lumainConfig->getResponseStatus();
+        return $this->config['response']['status'];
     }
 
     /**
@@ -69,6 +64,6 @@ class LumainConfig implements LumainConfigInterface
      */
     public function getResponseMessage(): string
     {
-        return $this->lumainConfig->getResponseMessage();
+        return $this->config['response']['message'];
     }
 }
