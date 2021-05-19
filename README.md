@@ -1,3 +1,5 @@
+[![StyleCI](https://github.styleci.io/repos/359335404/shield?branch=develop)](https://github.styleci.io/repos/359335404?branch=master)
+
 ## Welcome to lumaintenance
 
 This repository allows you to use the maintenance features in Lumen.
