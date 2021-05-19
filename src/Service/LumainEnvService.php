@@ -22,8 +22,7 @@ class LumainEnvService implements LumainEnvServiceInterface
      */
     public function __construct(
         LumainConfigInterface $lumainConfig
-    )
-    {
+    ) {
         $this->lumainConfig = $lumainConfig;
     }
 

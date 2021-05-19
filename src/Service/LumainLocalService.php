@@ -24,8 +24,7 @@ class LumainLocalService implements LumainLocalServiceInterface
      */
     public function __construct(
         LumainConfigInterface $lumainConfig
-    )
-    {
+    ) {
         $this->lumainConfig = $lumainConfig;
     }
 
