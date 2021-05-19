@@ -1,4 +1,4 @@
-[![StyleCI](https://github.styleci.io/repos/359335404/shield?branch=develop)](https://github.styleci.io/repos/359335404?branch=master)
+[![StyleCI](https://github.styleci.io/repos/359335404/shield?branch=main)](https://github.styleci.io/repos/359335404?branch=main)
 
 ## Welcome to lumaintenance
 
