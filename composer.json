@@ -1,6 +1,7 @@
 {
   "name": "yasudacloud/lumaintenance",
   "description": "This is a library that supports Lumen Framework maintenance functions.",
+  "license": "MIT",
   "require": {
     "php": "^7.3|^8.0",
     "laravel/lumen-framework": "^8.0"
