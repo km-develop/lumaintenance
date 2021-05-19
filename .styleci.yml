@@ -1,0 +1,11 @@
+php:
+  preset: psr12
+  disabled:
+    - no_unused_imports
+  finder:
+    exclude:
+      - config
+      - demo
+      - resources
+      - tests
+      - vendor

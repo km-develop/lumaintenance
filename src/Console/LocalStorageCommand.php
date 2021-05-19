@@ -12,7 +12,7 @@ use Lumaintenance\Service\LumainLocalService;
  */
 class LocalStorageCommand extends Command
 {
-    protected $signature = 'lumain:local {action : up or down} {--allow= : Enter the IP addresses to be allowed, separated by commas.}';
+    protected $signature = 'lumain:local {action : up or down} {--allow= : Separate the IPs with commas.}';
     protected $description = 'Performs maintenance operations using local files';
 
     /**
@@ -43,7 +43,7 @@ class LocalStorageCommand extends Command
             $allow = empty($allow) ? [] : explode(',', $allow);
             $this->lumainLocalService->down($allow);
         } else {
-            throw new InvalidArgumentException;
+            throw new InvalidArgumentException();
         }
     }
 }

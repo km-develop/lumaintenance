@@ -1,3 +1,5 @@
+[![StyleCI](https://github.styleci.io/repos/359335404/shield?branch=main)](https://github.styleci.io/repos/359335404?branch=main)
+
 ## Welcome to lumaintenance
 
 This repository allows you to use the maintenance features in Lumen.
@@ -95,7 +97,12 @@ cp vendor/yasudacloud/lumaintenance/resources/views/maintenance.blade.php resour
 ## Other
 The HTTP status code for the maintenance page is 503 status code by default. You can change the setting in lumaintenance.php.
 
+
+## Contact
 If you find any problems, please contact us at
 
+```
+hello@yasuda.cloud
+```
 
 Thanks to DeepL for the translation!

@@ -38,8 +38,7 @@ class MaintenanceMiddleware
         LumainLocalServiceInterface $lumainLocalService,
         LumainEnvServiceInterface $lumainEnvService,
         LumainConfigInterface $lumainConfig
-    )
-    {
+    ) {
         $this->lumainLocalService = $lumainLocalService;
         $this->lumainEnvService = $lumainEnvService;
         $this->lumainConfig = $lumainConfig;
@@ -90,15 +89,24 @@ class MaintenanceMiddleware
         $message = $this->lumainConfig->getResponseMessage();
 
         if ($isAPI) {
-            return response([
-                'message' => $message
-            ], $status);
+            return response(
+                [
+                    'message' => $message
+                ],
+                $status
+            );
         } else {
             $hasCustomView = view()->exists('lumaintenance.maintenance');
             $viewName = $hasCustomView ? 'lumaintenance.maintenance' : 'lumaintenance::maintenance';
-            return response(view($viewName, [
-                'message' => $message
-            ]), $status);
+            return response(
+                view(
+                    $viewName,
+                    [
+                        'message' => $message
+                    ]
+                ),
+                $status
+            );
         }
     }
 
